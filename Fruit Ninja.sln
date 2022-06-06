@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fruit Ninja", "Fruit Ninja\Fruit Ninja.csproj", "{897B26FF-6D78-4022-8799-32D33306A260}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{897B26FF-6D78-4022-8799-32D33306A260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897B26FF-6D78-4022-8799-32D33306A260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897B26FF-6D78-4022-8799-32D33306A260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897B26FF-6D78-4022-8799-32D33306A260}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {711DA320-E371-4B61-9B62-95922D3B9D2E}
+	EndGlobalSection
+EndGlobal
