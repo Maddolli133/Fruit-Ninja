@@ -130,9 +130,6 @@
   <data name="pineapple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pineapple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banana.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1536,5 +1533,8 @@
         6cOsWoH/ALZx/wCFL+y8R2/9KGs0w3d/gPT4h6T/ABW19+MSf0pf2Xiu35/5DWa4Xv8AkO/4WHoxH/Hv
         eD/tiP8AGl/ZmL7fn/kP+1cL3/I2/Bnj3SXa6wt1wE6wf71XDLcUt4/n/kRPM8K/tfkf/9k=
 </value>
+  </data>
+  <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

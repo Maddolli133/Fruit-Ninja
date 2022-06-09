@@ -159,7 +159,7 @@
             // appleImage
             // 
             this.appleImage.BackColor = System.Drawing.Color.Transparent;
-            this.appleImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.apple;
+            this.appleImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("appleImage.BackgroundImage")));
             this.appleImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.appleImage.Location = new System.Drawing.Point(762, 203);
             this.appleImage.Name = "appleImage";
