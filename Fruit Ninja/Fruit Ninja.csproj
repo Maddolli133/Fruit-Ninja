@@ -125,5 +125,20 @@
   <ItemGroup>
     <None Include="Resources\gameLife.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove background %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove background %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove background %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove background %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

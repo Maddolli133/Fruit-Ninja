@@ -33,7 +33,6 @@
             this.instructionsLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
-            this.highScoreLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.buttonHelpLabel = new System.Windows.Forms.Label();
@@ -44,12 +43,17 @@
             this.bombImage = new System.Windows.Forms.PictureBox();
             this.gameEngine = new System.Windows.Forms.Timer(this.components);
             this.exit2Button = new System.Windows.Forms.Button();
-            this.restartButton = new System.Windows.Forms.Button();
+            this.life1 = new System.Windows.Forms.PictureBox();
+            this.life2 = new System.Windows.Forms.PictureBox();
+            this.life3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pineappleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bananaImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bombImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life3)).BeginInit();
             this.SuspendLayout();
             // 
             // instructionsLabel
@@ -69,7 +73,7 @@
             this.titleLabel.BackColor = System.Drawing.Color.YellowGreen;
             this.titleLabel.Font = new System.Drawing.Font("Baskerville Old Face", 20F);
             this.titleLabel.ForeColor = System.Drawing.Color.Red;
-            this.titleLabel.Location = new System.Drawing.Point(413, -2);
+            this.titleLabel.Location = new System.Drawing.Point(375, -4);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(169, 32);
             this.titleLabel.TabIndex = 0;
@@ -81,22 +85,11 @@
             this.scoreLabel.BackColor = System.Drawing.Color.YellowGreen;
             this.scoreLabel.Font = new System.Drawing.Font("Baskerville Old Face", 16F);
             this.scoreLabel.ForeColor = System.Drawing.Color.Red;
-            this.scoreLabel.Location = new System.Drawing.Point(199, -2);
+            this.scoreLabel.Location = new System.Drawing.Point(150, 1);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(181, 23);
             this.scoreLabel.TabIndex = 0;
             this.scoreLabel.Text = "Your Score:";
-            // 
-            // highScoreLabel
-            // 
-            this.highScoreLabel.BackColor = System.Drawing.Color.YellowGreen;
-            this.highScoreLabel.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highScoreLabel.ForeColor = System.Drawing.Color.Red;
-            this.highScoreLabel.Location = new System.Drawing.Point(630, -2);
-            this.highScoreLabel.Name = "highScoreLabel";
-            this.highScoreLabel.Size = new System.Drawing.Size(167, 25);
-            this.highScoreLabel.TabIndex = 0;
-            this.highScoreLabel.Text = "High Score: ";
             // 
             // startButton
             // 
@@ -159,7 +152,7 @@
             // appleImage
             // 
             this.appleImage.BackColor = System.Drawing.Color.Transparent;
-            this.appleImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("appleImage.BackgroundImage")));
+            this.appleImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.apple;
             this.appleImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.appleImage.Location = new System.Drawing.Point(762, 203);
             this.appleImage.Name = "appleImage";
@@ -197,7 +190,7 @@
             this.bombImage.BackColor = System.Drawing.Color.Transparent;
             this.bombImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.bomb;
             this.bombImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bombImage.Location = new System.Drawing.Point(770, 323);
+            this.bombImage.Location = new System.Drawing.Point(770, 314);
             this.bombImage.Name = "bombImage";
             this.bombImage.Size = new System.Drawing.Size(33, 33);
             this.bombImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -217,7 +210,7 @@
             this.exit2Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exit2Button.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit2Button.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.exit2Button.Location = new System.Drawing.Point(110, 0);
+            this.exit2Button.Location = new System.Drawing.Point(3, 5);
             this.exit2Button.Name = "exit2Button";
             this.exit2Button.Size = new System.Drawing.Size(73, 25);
             this.exit2Button.TabIndex = 1;
@@ -226,23 +219,44 @@
             this.exit2Button.Visible = false;
             this.exit2Button.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // restartButton
+            // life1
             // 
-            this.restartButton.BackColor = System.Drawing.Color.Transparent;
-            this.restartButton.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Red_brick;
-            this.restartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.restartButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.restartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restartButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.restartButton.Location = new System.Drawing.Point(12, 1);
-            this.restartButton.Name = "restartButton";
-            this.restartButton.Size = new System.Drawing.Size(75, 24);
-            this.restartButton.TabIndex = 3;
-            this.restartButton.Text = "Restart";
-            this.restartButton.UseVisualStyleBackColor = false;
-            this.restartButton.Visible = false;
-            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            this.life1.BackColor = System.Drawing.Color.Transparent;
+            this.life1.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Heart;
+            this.life1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.life1.Location = new System.Drawing.Point(760, 423);
+            this.life1.Name = "life1";
+            this.life1.Size = new System.Drawing.Size(48, 40);
+            this.life1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.life1.TabIndex = 3;
+            this.life1.TabStop = false;
+            this.life1.Visible = false;
+            // 
+            // life2
+            // 
+            this.life2.BackColor = System.Drawing.Color.Transparent;
+            this.life2.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Heart;
+            this.life2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.life2.Location = new System.Drawing.Point(760, 386);
+            this.life2.Name = "life2";
+            this.life2.Size = new System.Drawing.Size(48, 40);
+            this.life2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.life2.TabIndex = 4;
+            this.life2.TabStop = false;
+            this.life2.Visible = false;
+            // 
+            // life3
+            // 
+            this.life3.BackColor = System.Drawing.Color.Transparent;
+            this.life3.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Heart;
+            this.life3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.life3.Location = new System.Drawing.Point(760, 350);
+            this.life3.Name = "life3";
+            this.life3.Size = new System.Drawing.Size(48, 40);
+            this.life3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.life3.TabIndex = 5;
+            this.life3.TabStop = false;
+            this.life3.Visible = false;
             // 
             // playArea
             // 
@@ -251,8 +265,10 @@
             this.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Screenshot__6_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(809, 461);
+            this.Controls.Add(this.life3);
+            this.Controls.Add(this.life2);
+            this.Controls.Add(this.life1);
             this.Controls.Add(this.logoImage);
-            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.instructionsLabel);
             this.Controls.Add(this.bananaImage);
             this.Controls.Add(this.pineappleImage);
@@ -261,7 +277,6 @@
             this.Controls.Add(this.exit2Button);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.startButton);
-            this.Controls.Add(this.highScoreLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.buttonHelpLabel);
@@ -276,6 +291,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pineappleImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bananaImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bombImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -285,7 +303,6 @@
         private System.Windows.Forms.Label instructionsLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label scoreLabel;
-        private System.Windows.Forms.Label highScoreLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label buttonHelpLabel;
@@ -296,7 +313,9 @@
         private System.Windows.Forms.PictureBox bombImage;
         private System.Windows.Forms.Timer gameEngine;
         private System.Windows.Forms.Button exit2Button;
-        private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.PictureBox life1;
+        private System.Windows.Forms.PictureBox life2;
+        private System.Windows.Forms.PictureBox life3;
         //     private System.Windows.Forms.Label playArea;
     }
 }
