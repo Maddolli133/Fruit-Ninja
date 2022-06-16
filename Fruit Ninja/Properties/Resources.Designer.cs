@@ -71,6 +71,16 @@ namespace Fruit_Ninja.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] backMusic {
+            get {
+                object obj = ResourceManager.GetObject("backMusic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap banana {
@@ -91,6 +101,33 @@ namespace Fruit_Ninja.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream boom {
+            get {
+                return ResourceManager.GetStream("boom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream cut {
+            get {
+                return ResourceManager.GetStream("cut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream down {
+            get {
+                return ResourceManager.GetStream("down", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Heart {
@@ -106,6 +143,16 @@ namespace Fruit_Ninja.Properties {
         internal static System.Drawing.Bitmap Lago {
             get {
                 object obj = ResourceManager.GetObject("Lago", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mango {
+            get {
+                object obj = ResourceManager.GetObject("mango", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +190,9 @@ namespace Fruit_Ninja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap taget {
+        internal static System.Drawing.Bitmap watermelon {
             get {
-                object obj = ResourceManager.GetObject("taget", resourceCulture);
+                object obj = ResourceManager.GetObject("watermelon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

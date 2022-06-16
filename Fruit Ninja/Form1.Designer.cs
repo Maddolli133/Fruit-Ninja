@@ -46,6 +46,13 @@
             this.life1 = new System.Windows.Forms.PictureBox();
             this.life2 = new System.Windows.Forms.PictureBox();
             this.life3 = new System.Windows.Forms.PictureBox();
+            this.deadLabel = new System.Windows.Forms.Label();
+            this.mangoImage = new System.Windows.Forms.PictureBox();
+            this.highscoreLabel = new System.Windows.Forms.Label();
+            this.restartButton = new System.Windows.Forms.Button();
+            this.watermelonImage = new System.Windows.Forms.PictureBox();
+            this.easyButton = new System.Windows.Forms.Button();
+            this.hardButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pineappleImage)).BeginInit();
@@ -54,6 +61,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.life1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mangoImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watermelonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // instructionsLabel
@@ -61,7 +70,7 @@
             this.instructionsLabel.BackColor = System.Drawing.Color.Transparent;
             this.instructionsLabel.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.instructionsLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.instructionsLabel.Location = new System.Drawing.Point(150, 77);
+            this.instructionsLabel.Location = new System.Drawing.Point(172, 77);
             this.instructionsLabel.Name = "instructionsLabel";
             this.instructionsLabel.Size = new System.Drawing.Size(614, 375);
             this.instructionsLabel.TabIndex = 0;
@@ -73,7 +82,7 @@
             this.titleLabel.BackColor = System.Drawing.Color.YellowGreen;
             this.titleLabel.Font = new System.Drawing.Font("Baskerville Old Face", 20F);
             this.titleLabel.ForeColor = System.Drawing.Color.Red;
-            this.titleLabel.Location = new System.Drawing.Point(375, -4);
+            this.titleLabel.Location = new System.Drawing.Point(399, -4);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(169, 32);
             this.titleLabel.TabIndex = 0;
@@ -85,7 +94,7 @@
             this.scoreLabel.BackColor = System.Drawing.Color.YellowGreen;
             this.scoreLabel.Font = new System.Drawing.Font("Baskerville Old Face", 16F);
             this.scoreLabel.ForeColor = System.Drawing.Color.Red;
-            this.scoreLabel.Location = new System.Drawing.Point(150, 1);
+            this.scoreLabel.Location = new System.Drawing.Point(172, 1);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(181, 23);
             this.scoreLabel.TabIndex = 0;
@@ -154,7 +163,7 @@
             this.appleImage.BackColor = System.Drawing.Color.Transparent;
             this.appleImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.apple;
             this.appleImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.appleImage.Location = new System.Drawing.Point(762, 203);
+            this.appleImage.Location = new System.Drawing.Point(751, 99);
             this.appleImage.Name = "appleImage";
             this.appleImage.Size = new System.Drawing.Size(46, 31);
             this.appleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,7 +175,7 @@
             this.pineappleImage.BackColor = System.Drawing.Color.Transparent;
             this.pineappleImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.pineapple;
             this.pineappleImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pineappleImage.Location = new System.Drawing.Point(760, 277);
+            this.pineappleImage.Location = new System.Drawing.Point(168, 258);
             this.pineappleImage.Name = "pineappleImage";
             this.pineappleImage.Size = new System.Drawing.Size(48, 31);
             this.pineappleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +187,7 @@
             this.bananaImage.BackColor = System.Drawing.Color.Transparent;
             this.bananaImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.banana;
             this.bananaImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bananaImage.Location = new System.Drawing.Point(762, 240);
+            this.bananaImage.Location = new System.Drawing.Point(726, 368);
             this.bananaImage.Name = "bananaImage";
             this.bananaImage.Size = new System.Drawing.Size(41, 31);
             this.bananaImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +199,7 @@
             this.bombImage.BackColor = System.Drawing.Color.Transparent;
             this.bombImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.bomb;
             this.bombImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bombImage.Location = new System.Drawing.Point(770, 314);
+            this.bombImage.Location = new System.Drawing.Point(213, 405);
             this.bombImage.Name = "bombImage";
             this.bombImage.Size = new System.Drawing.Size(33, 33);
             this.bombImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -258,6 +267,103 @@
             this.life3.TabStop = false;
             this.life3.Visible = false;
             // 
+            // deadLabel
+            // 
+            this.deadLabel.BackColor = System.Drawing.Color.Transparent;
+            this.deadLabel.Font = new System.Drawing.Font("Baskerville Old Face", 20F);
+            this.deadLabel.ForeColor = System.Drawing.Color.Red;
+            this.deadLabel.Location = new System.Drawing.Point(320, 206);
+            this.deadLabel.Name = "deadLabel";
+            this.deadLabel.Size = new System.Drawing.Size(169, 32);
+            this.deadLabel.TabIndex = 0;
+            this.deadLabel.Text = "You Lose!";
+            this.deadLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.deadLabel.Visible = false;
+            // 
+            // mangoImage
+            // 
+            this.mangoImage.BackColor = System.Drawing.Color.Transparent;
+            this.mangoImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.mango;
+            this.mangoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mangoImage.Location = new System.Drawing.Point(155, 86);
+            this.mangoImage.Name = "mangoImage";
+            this.mangoImage.Size = new System.Drawing.Size(46, 31);
+            this.mangoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mangoImage.TabIndex = 2;
+            this.mangoImage.TabStop = false;
+            // 
+            // highscoreLabel
+            // 
+            this.highscoreLabel.BackColor = System.Drawing.Color.YellowGreen;
+            this.highscoreLabel.Font = new System.Drawing.Font("Baskerville Old Face", 16F);
+            this.highscoreLabel.ForeColor = System.Drawing.Color.Red;
+            this.highscoreLabel.Location = new System.Drawing.Point(616, 1);
+            this.highscoreLabel.Name = "highscoreLabel";
+            this.highscoreLabel.Size = new System.Drawing.Size(181, 23);
+            this.highscoreLabel.TabIndex = 0;
+            this.highscoreLabel.Text = "High Score:";
+            // 
+            // restartButton
+            // 
+            this.restartButton.BackColor = System.Drawing.Color.Transparent;
+            this.restartButton.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Red_brick;
+            this.restartButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.restartButton.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.restartButton.Location = new System.Drawing.Point(93, 5);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(73, 25);
+            this.restartButton.TabIndex = 1;
+            this.restartButton.Text = "Restart";
+            this.restartButton.UseVisualStyleBackColor = false;
+            this.restartButton.Visible = false;
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            // 
+            // watermelonImage
+            // 
+            this.watermelonImage.BackColor = System.Drawing.Color.Transparent;
+            this.watermelonImage.BackgroundImage = global::Fruit_Ninja.Properties.Resources.watermelon;
+            this.watermelonImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.watermelonImage.Location = new System.Drawing.Point(751, 229);
+            this.watermelonImage.Name = "watermelonImage";
+            this.watermelonImage.Size = new System.Drawing.Size(55, 46);
+            this.watermelonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.watermelonImage.TabIndex = 2;
+            this.watermelonImage.TabStop = false;
+            // 
+            // easyButton
+            // 
+            this.easyButton.BackColor = System.Drawing.Color.Transparent;
+            this.easyButton.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Red_brick;
+            this.easyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.easyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.easyButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.easyButton.Location = new System.Drawing.Point(3, 86);
+            this.easyButton.Name = "easyButton";
+            this.easyButton.Size = new System.Drawing.Size(66, 34);
+            this.easyButton.TabIndex = 1;
+            this.easyButton.Text = "Easy";
+            this.easyButton.UseVisualStyleBackColor = false;
+            this.easyButton.Click += new System.EventHandler(this.easyButton_Click);
+            // 
+            // hardButton
+            // 
+            this.hardButton.BackColor = System.Drawing.Color.Transparent;
+            this.hardButton.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Red_brick;
+            this.hardButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hardButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.hardButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hardButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.hardButton.Location = new System.Drawing.Point(75, 86);
+            this.hardButton.Name = "hardButton";
+            this.hardButton.Size = new System.Drawing.Size(64, 34);
+            this.hardButton.TabIndex = 1;
+            this.hardButton.Text = "Hard";
+            this.hardButton.UseVisualStyleBackColor = false;
+            this.hardButton.Click += new System.EventHandler(this.hardButton_Click_1);
+            // 
             // playArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,21 +371,28 @@
             this.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Screenshot__6_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(809, 461);
+            this.Controls.Add(this.deadLabel);
             this.Controls.Add(this.life3);
             this.Controls.Add(this.life2);
             this.Controls.Add(this.life1);
-            this.Controls.Add(this.logoImage);
-            this.Controls.Add(this.instructionsLabel);
             this.Controls.Add(this.bananaImage);
             this.Controls.Add(this.pineappleImage);
             this.Controls.Add(this.bombImage);
+            this.Controls.Add(this.mangoImage);
+            this.Controls.Add(this.watermelonImage);
             this.Controls.Add(this.appleImage);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.exit2Button);
             this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.hardButton);
+            this.Controls.Add(this.easyButton);
             this.Controls.Add(this.startButton);
+            this.Controls.Add(this.highscoreLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.buttonHelpLabel);
+            this.Controls.Add(this.instructionsLabel);
+            this.Controls.Add(this.logoImage);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "playArea";
@@ -294,6 +407,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.life1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mangoImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.watermelonImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,6 +431,13 @@
         private System.Windows.Forms.PictureBox life1;
         private System.Windows.Forms.PictureBox life2;
         private System.Windows.Forms.PictureBox life3;
+        private System.Windows.Forms.Label deadLabel;
+        private System.Windows.Forms.PictureBox mangoImage;
+        private System.Windows.Forms.Label highscoreLabel;
+        private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.PictureBox watermelonImage;
+        private System.Windows.Forms.Button easyButton;
+        private System.Windows.Forms.Button hardButton;
         //     private System.Windows.Forms.Label playArea;
     }
 }
