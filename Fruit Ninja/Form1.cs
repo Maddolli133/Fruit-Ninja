@@ -121,6 +121,7 @@ namespace Fruit_Ninja
             restartButton.Visible = true;
             easyButton.Visible = false;
             hardButton.Visible = false;
+            mediumButton.Visible = false;
             life1.Visible = true;
             life2.Visible = true;
             life3.Visible = true;
@@ -172,6 +173,7 @@ namespace Fruit_Ninja
             restartButton.Visible = false;
             easyButton.Visible = true;
             hardButton.Visible = true;
+            mediumButton.Visible = true;
             life1.Visible = false;
             life2.Visible = false;
             life3.Visible = false;
@@ -192,9 +194,13 @@ namespace Fruit_Ninja
         {
             FruitSpeed = -9;
         }
-        private void hardButton_Click_1(object sender, EventArgs e)
+        private void mediumButton_Click(object sender, EventArgs e)
         {
             FruitSpeed = -16;
+        }
+        private void hardButton_Click_1(object sender, EventArgs e)
+        {
+            FruitSpeed = -20;
         }
         private void gameEngine_Tick(object sender, EventArgs e)
         {

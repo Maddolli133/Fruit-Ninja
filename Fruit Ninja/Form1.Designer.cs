@@ -53,6 +53,7 @@
             this.watermelonImage = new System.Windows.Forms.PictureBox();
             this.easyButton = new System.Windows.Forms.Button();
             this.hardButton = new System.Windows.Forms.Button();
+            this.mediumButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pineappleImage)).BeginInit();
@@ -70,9 +71,9 @@
             this.instructionsLabel.BackColor = System.Drawing.Color.Transparent;
             this.instructionsLabel.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.instructionsLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.instructionsLabel.Location = new System.Drawing.Point(172, 77);
+            this.instructionsLabel.Location = new System.Drawing.Point(185, 78);
             this.instructionsLabel.Name = "instructionsLabel";
-            this.instructionsLabel.Size = new System.Drawing.Size(614, 375);
+            this.instructionsLabel.Size = new System.Drawing.Size(582, 375);
             this.instructionsLabel.TabIndex = 0;
             this.instructionsLabel.Text = resources.GetString("instructionsLabel.Text");
             this.instructionsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -108,7 +109,7 @@
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.startButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.startButton.Location = new System.Drawing.Point(12, 137);
+            this.startButton.Location = new System.Drawing.Point(12, 166);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(115, 60);
             this.startButton.TabIndex = 1;
@@ -124,7 +125,7 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exitButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.exitButton.Location = new System.Drawing.Point(12, 229);
+            this.exitButton.Location = new System.Drawing.Point(12, 248);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(115, 60);
             this.exitButton.TabIndex = 1;
@@ -138,12 +139,11 @@
             this.buttonHelpLabel.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHelpLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.buttonHelpLabel.Image = global::Fruit_Ninja.Properties.Resources.Red_brick;
-            this.buttonHelpLabel.Location = new System.Drawing.Point(12, 301);
+            this.buttonHelpLabel.Location = new System.Drawing.Point(12, 325);
             this.buttonHelpLabel.Name = "buttonHelpLabel";
-            this.buttonHelpLabel.Size = new System.Drawing.Size(115, 162);
+            this.buttonHelpLabel.Size = new System.Drawing.Size(115, 113);
             this.buttonHelpLabel.TabIndex = 0;
-            this.buttonHelpLabel.Text = "Controls:\r\n\r\n  Player 1:  Move mouse to\r\nmove\r\n\r\n Player 2: Spacebar to\r\n shoot b" +
-    "ombs";
+            this.buttonHelpLabel.Text = "Controls:\r\n\r\n  Player 1:  Move mouse to\r\nmove\r\n\r\n";
             this.buttonHelpLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // logoImage
@@ -272,7 +272,7 @@
             this.deadLabel.BackColor = System.Drawing.Color.Transparent;
             this.deadLabel.Font = new System.Drawing.Font("Baskerville Old Face", 20F);
             this.deadLabel.ForeColor = System.Drawing.Color.Red;
-            this.deadLabel.Location = new System.Drawing.Point(320, 206);
+            this.deadLabel.Location = new System.Drawing.Point(327, 194);
             this.deadLabel.Name = "deadLabel";
             this.deadLabel.Size = new System.Drawing.Size(169, 32);
             this.deadLabel.TabIndex = 0;
@@ -340,11 +340,11 @@
             this.easyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.easyButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.easyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.easyButton.Location = new System.Drawing.Point(3, 86);
+            this.easyButton.Location = new System.Drawing.Point(3, 77);
             this.easyButton.Name = "easyButton";
-            this.easyButton.Size = new System.Drawing.Size(66, 34);
+            this.easyButton.Size = new System.Drawing.Size(66, 31);
             this.easyButton.TabIndex = 1;
-            this.easyButton.Text = "Easy";
+            this.easyButton.Text = "Lvl 1";
             this.easyButton.UseVisualStyleBackColor = false;
             this.easyButton.Click += new System.EventHandler(this.easyButton_Click);
             // 
@@ -356,13 +356,29 @@
             this.hardButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.hardButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hardButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.hardButton.Location = new System.Drawing.Point(75, 86);
+            this.hardButton.Location = new System.Drawing.Point(36, 114);
             this.hardButton.Name = "hardButton";
-            this.hardButton.Size = new System.Drawing.Size(64, 34);
+            this.hardButton.Size = new System.Drawing.Size(71, 33);
             this.hardButton.TabIndex = 1;
-            this.hardButton.Text = "Hard";
+            this.hardButton.Text = "Lvl 3";
             this.hardButton.UseVisualStyleBackColor = false;
             this.hardButton.Click += new System.EventHandler(this.hardButton_Click_1);
+            // 
+            // mediumButton
+            // 
+            this.mediumButton.BackColor = System.Drawing.Color.Transparent;
+            this.mediumButton.BackgroundImage = global::Fruit_Ninja.Properties.Resources.Red_brick;
+            this.mediumButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mediumButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.mediumButton.Font = new System.Drawing.Font("Baskerville Old Face", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.mediumButton.Location = new System.Drawing.Point(75, 77);
+            this.mediumButton.Name = "mediumButton";
+            this.mediumButton.Size = new System.Drawing.Size(66, 31);
+            this.mediumButton.TabIndex = 1;
+            this.mediumButton.Text = "Lvl 2";
+            this.mediumButton.UseVisualStyleBackColor = false;
+            this.mediumButton.Click += new System.EventHandler(this.mediumButton_Click);
             // 
             // playArea
             // 
@@ -385,6 +401,7 @@
             this.Controls.Add(this.exit2Button);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.hardButton);
+            this.Controls.Add(this.mediumButton);
             this.Controls.Add(this.easyButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.highscoreLabel);
@@ -438,6 +455,7 @@
         private System.Windows.Forms.PictureBox watermelonImage;
         private System.Windows.Forms.Button easyButton;
         private System.Windows.Forms.Button hardButton;
+        private System.Windows.Forms.Button mediumButton;
         //     private System.Windows.Forms.Label playArea;
     }
 }

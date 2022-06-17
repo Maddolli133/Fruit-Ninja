@@ -128,9 +128,7 @@ Hitting a bomb or missing a fruit will remove 1 life.
 
 Each fruit you hit adds 1 point. 
 
-Your score and high score are in the top.
-
-Player 2 can shoot bombs every 10 seconds.</value>
+Your score and high score are in the top.</value>
   </data>
   <metadata name="gameEngine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
