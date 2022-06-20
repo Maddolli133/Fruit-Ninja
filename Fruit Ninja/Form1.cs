@@ -20,10 +20,13 @@ namespace Fruit_Ninja
         int highscore = 0;
         int life = 3;
         int FruitSpeed = -9;
+
         //Countdown to game start
         int counter = 0;
+
         //Player and ball hit box
         Rectangle target = new Rectangle(0, 0, 10, 10);
+
         //Obstacles lists
         List<Rectangle> apple = new List<Rectangle>();
         List<int> appleSpeed = new List<int>();
@@ -45,9 +48,7 @@ namespace Fruit_Ninja
 
         //Different brushes/pens
         SolidBrush whiteBrush = new SolidBrush(Color.White);
-        SolidBrush redBrush = new SolidBrush(Color.Red);
-        SolidBrush yellowBrush = new SolidBrush(Color.Yellow);
-        SolidBrush orangeBrush = new SolidBrush(Color.Orange);
+        SolidBrush transparent = new SolidBrush(Color.Transparent);
 
         //Random values
         Random randGen = new Random();
@@ -72,14 +73,17 @@ namespace Fruit_Ninja
         }
         private void Media_Ended(object sender, EventArgs e)
         {
+            //Music loop
             backMusic.Stop();
             backMusic.Play();
         }
         public void GameInitialize()
         {
+            //Start the game engine and sets the game running
             gameEngine.Enabled = true;
             gameState = "running";
             score = 0;
+            //Clear lists
             apple.Clear();
             appleSpeed.Clear();
             banana.Clear();
@@ -131,13 +135,13 @@ namespace Fruit_Ninja
 
             this.Focus();
         }
-        private void exitButton_Click(object sender, EventArgs e)
+        private void exitButton_Click(object sender, EventArgs e)//Closes the aqpplication
         {
             Close();
         }
         private void restartButton_Click(object sender, EventArgs e)
         {
-            
+            //Lists are cleared
             apple.Clear();
             appleSpeed.Clear();
             banana.Clear();
@@ -190,16 +194,19 @@ namespace Fruit_Ninja
                 score = 0;
             }
         }
-        private void easyButton_Click(object sender, EventArgs e)
+        private void easyButton_Click(object sender, EventArgs e) //Easy Level Of Difficulty
         {
+            //Changes the fruit speed
             FruitSpeed = -9;
         }
-        private void mediumButton_Click(object sender, EventArgs e)
+        private void mediumButton_Click(object sender, EventArgs e)//Medium Level Of Difficulty
         {
+            //Changes the fruit speed
             FruitSpeed = -16;
         }
-        private void hardButton_Click_1(object sender, EventArgs e)
+        private void hardButton_Click_1(object sender, EventArgs e)//Hard Level Of Difficulty
         {
+            //Changes the fruit speed
             FruitSpeed = -20;
         }
         private void gameEngine_Tick(object sender, EventArgs e)
@@ -399,15 +406,17 @@ namespace Fruit_Ninja
                 gameEngine.Enabled = false;
             }
 
-            //check if fruit hits player. If yes remove it & add score
+            //check if fruit hits player. If yes remove it & than add score
             for (int i = 0; i < apple.Count(); i++)
             {
                 if (target.IntersectsWith(apple[i]))
                 {
                     apple.RemoveAt(i);
                     appleSpeed.RemoveAt(i);
+                    //Increases score
                     score++;
                     scoreLabel.Text = $"Your Score: {score}";
+                    //Stop than Plays Sound
                     slashSound.Stop();
                     slashSound.Play();
                 }
@@ -419,8 +428,10 @@ namespace Fruit_Ninja
                 {
                     banana.RemoveAt(i);
                     bananaSpeed.RemoveAt(i);
+                    //Increases score
                     score++;
                     scoreLabel.Text = $"Your Score: {score}";
+                    //Stop than Plays Sound
                     slashSound.Stop();
                     slashSound.Play();
                 }
@@ -432,8 +443,10 @@ namespace Fruit_Ninja
                 {
                     pineapple.RemoveAt(i);
                     pineappleSpeed.RemoveAt(i);
+                    //Increases score
                     score++;
                     scoreLabel.Text = $"Your Score: {score}";
+                    //Stop than Plays Sound
                     slashSound.Stop();
                     slashSound.Play();
                 }
@@ -445,7 +458,9 @@ namespace Fruit_Ninja
                 {
                     bomb.RemoveAt(i);
                     bombSpeed.RemoveAt(i);
+                    //Removes life
                     life--;
+                    //Stop than Plays Sound
                     boomSound.Stop();
                     boomSound.Play();
                 }
@@ -457,8 +472,10 @@ namespace Fruit_Ninja
                 {
                     mango.RemoveAt(i);
                     mangoSpeed.RemoveAt(i);
+                    //Increases score
                     score++;
                     scoreLabel.Text = $"Your Score: {score}";
+                    //Stop than Plays Sound
                     slashSound.Stop();
                     slashSound.Play();
                 }
@@ -470,89 +487,118 @@ namespace Fruit_Ninja
                 {
                     watermelon.RemoveAt(i);
                     watermelonSpeed.RemoveAt(i);
+                    //Increases score
                     score++;
                     scoreLabel.Text = $"Your Score: {score}";
+                    //Stop than Plays Sound
                     slashSound.Stop();
                     slashSound.Play();
                 }
             }
 
+            //A counter used for the time it takes till next fruit
             counter++;
 
+            //Random Variables that decides the x value on where the fruits will spawn next
             int x;
             int x2;
             int x3;
             int x4;
             int x5;
             int x6;
-           
+
+           //The Random generators that give the x value its random number
             x = randGen.Next(10, 790);
             x2 = randGen.Next(10, 790);
             x3 = randGen.Next(10, 790);
             x4 = randGen.Next(10, 790);
             x5 = randGen.Next(10, 790);
             x6 = randGen.Next(10, 790);
-            
+
+            //The If statments that are timed with the counter, when the counter is equal to the fruits time than a fruit will spawn
             if (counter == 40)
             {
+                //Adds the fruit
                 apple.Add(new Rectangle(x, 499, 40, 40));
+                //Adds the speed
                 appleSpeed.Add(FruitSpeed);
             }
             if (counter == 60)
             {
+                //Adds the fruit
                 banana.Add(new Rectangle(x2, 499, 40, 40));
+                //Adds the speed
                 bananaSpeed.Add(FruitSpeed);
             }
             if (counter == 80)
             {
+                //Adds the fruit
                 pineapple.Add(new Rectangle(x3, 499, 40, 40));
+                //Adds the speed
                 pineappleSpeed.Add(FruitSpeed);
             }
             if (counter == 100)
             {
+                //Adds the bomb
                 bomb.Add(new Rectangle(x4, 499, 40, 40));
+                //Adds the speed
                 bombSpeed.Add(FruitSpeed);
             }
             if (counter == 110)
             {
+                //Adds the fruit
                 mango.Add(new Rectangle(x5, 499, 40, 40));
+                //Adds the speed
                 mangoSpeed.Add(FruitSpeed);
             }
             if (counter == 115)
             {
+                //Adds the fruit
                 watermelon.Add(new Rectangle(x5, 499, 40, 40));
+                //Adds the speed
                 watermelonSpeed.Add(FruitSpeed);
+                //Resets Counter so the process can restart
                 counter = 0;
             }
             Refresh();
         }
-
+        
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.White, target);
-
-            for (int i = 0; i < apple.Count(); i++)
+            //Target Image
+            if (life > 0)
             {
+                e.Graphics.FillRectangle(Brushes.White, target);
+            }
+            //Each fruit image
+            for (int i = 0; i < apple.Count(); i++)
+            { 
+                //Apple image
                 e.Graphics.DrawImage(Properties.Resources.apple, apple[i]);
             }
             for (int i = 0; i < banana.Count(); i++)
             {
+                //Banana image
                 e.Graphics.DrawImage(Properties.Resources.banana, banana[i]);
             }
             for (int i = 0; i < pineapple.Count(); i++)
             {
+                //Pineapple image
                 e.Graphics.DrawImage(Properties.Resources.pineapple, pineapple[i]);
             }
             for (int i = 0; i < bomb.Count(); i++)
             {
+                //Bomb image
                 e.Graphics.DrawImage(Properties.Resources.bomb, bomb[i]);
             }
             for (int i = 0; i < mango.Count(); i++)
             {
+                //Mango image
                 e.Graphics.DrawImage(Properties.Resources.mango, mango[i]);
             }
             for (int i = 0; i < watermelon.Count(); i++)
             {
+                //Watermelon image
                 e.Graphics.DrawImage(Properties.Resources.watermelon, watermelon[i]);
             }
         }
