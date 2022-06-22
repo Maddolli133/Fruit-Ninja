@@ -388,7 +388,7 @@ namespace Fruit_Ninja
                     bombSpeed.RemoveAt(i);
                 }
             }
-            //checks is lifes is lost than remove hearts, if all life gone player dies
+            //checks is lifes is lost than remove hearts, if all life gone player dies.
 
             if (life == 2)
             {
